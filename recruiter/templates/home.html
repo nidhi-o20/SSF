@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+        body {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* CSS for header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        .header .logo {
+            font-size: 25px;
+            font-family: 'Sriracha', cursive;
+            color: #000;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+
+        .nav-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f5f5f5;
+            margin-right: 20px;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: #000;
+            padding: 35px 20px;
+        }
+
+        /* CSS for main section */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 520px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://media-exp1.licdn.com/dms/image/C561BAQEtDl_9aUd4pw/company-background_10000/0/1645100909429?e=1655582400&v=beta&t=rL92gl8IZlGv0Q_cXW6Fvg2UIipJiFARIJ13hEypYe8);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .intro h1 {
+            font-family: sans-serif;
+            font-size: 60px;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .intro p {
+            font-size: 20px;
+            color: #d1d1d1;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        .intro button {
+            background-color: #5edaf0;
+            color: #000;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+        }
+
+        .achievements {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 80px;
+        }
+
+        .achievements .work {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .achievements .work i {
+            width: fit-content;
+            font-size: 50px;
+            color: #333333;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            padding: 12px;
+        }
+
+        .achievements .work .work-heading {
+            font-size: 20px;
+            color: #333333;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        .achievements .work .work-text {
+            font-size: 15px;
+            color: #585858;
+            margin: 10px 0;
+        }
+
+        .about-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 80px;
+            border-top: 2px solid #eeeeee;
+        }
+
+        .about-me img {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-me-text h2 {
+            font-size: 30px;
+            color: #333333;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .about-me-text p {
+            font-size: 15px;
+            color: #585858;
+            margin: 10px 0;
+        }
+
+        /* CSS for footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #302f49;
+            padding: 40px 80px;
+        }
+
+        .footer .copy {
+            color: #fff;
+        }
+
+        .bottom-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .bottom-links .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .bottom-links .links span {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        .bottom-links .links a {
+            text-decoration: none;
+            color: #a1a1a1;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class='header'>
+        <a href="{% url 'recruiter-home'%}" class="logo">Saraswati Seva Foundation</a>
+        <nav class="nav-items">
+            <a href="{% url 'recruiter-home'%}">Home</a>
+            
+            <a href="/profile">Student Sign Up</a>
+            
+            <a href="{% url 'recruiter-signup' %}">Recruiter Sign Up</a>
+
+        </nav>
+    </header>
+
+    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="..." alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
+        </div>
+      </div> -->
+    <!-- Carousel -->
+    <!-- <div id="ImageCarouselCSS" class="carousel slide" data-ride="carousel">
+
+
+        <ol class="carousel-indicators">
+      
+      
+          <li data-target="#ImageCarouselCSS" data-slide-to="0" class="active"></li>
+      
+      
+          <li data-target="#ImageCarouselCSS" data-slide-to="1"></li>
+      
+      
+          <li data-target="#ImageCarouselCSS" data-slide-to="2"></li>
+      
+      
+        </ol>
+      
+      
+        <div class="carousel-inner">
+      
+      
+          <div class="carousel-item active">
+      
+      
+            <img src="https://source.unsplash.com/fk4tiMlDFF0/900x600/" class="d-block w-100" alt="tiniest puppy">
+      
+      
+          </div>
+      
+      
+          <div class="carousel-item">
+      
+      
+            <img src="https://source.unsplash.com/TzjMd7i5WQI/900x600/" class="d-block w-100" alt="tiny puppy">
+      
+      
+          </div>
+      
+      
+          <div class="carousel-item">
+      
+      
+            <img src="https://source.unsplash.com/-Go4DH2pZbc/900x600/" class="d-block w-100" alt="least tiny but still tiny puppy">
+      
+      
+          </div>
+      
+      
+        </div>
+      
+      
+      </div>
+      <div id="ImageCarouselCSS" class="carousel slide" data-ride="carousel">
+
+
+  <ol class="carousel-indicators">
+
+
+    <li data-target="#ImageCarouselCSS" data-slide-to="0" class="active"></li>
+
+
+    <li data-target="#ImageCarouselCSS" data-slide-to="1"></li>
+
+
+    <li data-target="#ImageCarouselCSS" data-slide-to="2"></li>
+
+
+  </ol>
+
+
+  <div class="carousel-inner">
+
+
+    <div class="carousel-item active">
+
+
+      <img src="https://source.unsplash.com/fk4tiMlDFF0/900x600/" class="d-block w-100" alt="tiniest puppy">
+
+
+    </div>
+
+
+    <div class="carousel-item">
+
+
+      <img src="https://source.unsplash.com/TzjMd7i5WQI/900x600/" class="d-block w-100" alt="tiny puppy">
+
+
+    </div>
+
+
+    <div class="carousel-item">
+
+
+      <img src="https://source.unsplash.com/-Go4DH2pZbc/900x600/" class="d-block w-100" alt="least tiny but still tiny puppy">
+
+
+    </div>
+
+
+  </div>
+
+
+</div> -->
+    <main>
+        <div class="intro">
+            <h1>SSF</h1>
+            <p>Fast growing non-profit organisation</p>
+            <button>Learn More</button>
+        </div>
+        <div class="about-me">
+            <div class="about-me-text">
+                <h2>About Us</h2>
+                <p>Saraswati Seva Foundation (SSF) is a fast-growing non-profit organization with a vision to reduce
+                    poverty and encourage social justice by educating the children, enabling the youth, empowering the
+                    women and supporting the farmers. SSF partners with other development agencies and institutions, and
+                    promotes grass-root change leadership in the remote regions. Our effort is to work towards building
+                    technology-driven and scalable solutions for specific social needs that are environmentally
+                    sustainable and commercially viable.</p>
+            </div>
+            <img src="https://www.therightnews.in/wp-content/uploads/2021/08/IMG-20210809-WA0178.jpg" alt="me">
+        </div>
+        <div class="achievements">
+            <div class="work">
+                <!-- <i class="fas fa-atom"></i> -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYbG1X4mtYxr0E8whdyU4AuperPgSfdyIVlcKj4hNa0lPKnNpnT3WjNdyus5E8MujM3L4&usqp=CAU"
+                    alt="me">
+                <p class="work-heading">Child</p>
+                <p class="work-text">SSF’s programs for children ensure that children in neglected regions and under
+                    resourced schools have access to best breed educational content and gain critical life skills
+                    alongside 21st century knowledge to prepare them for an ever changing world
+                    SSF aims to bridge educational and digital divides through technology adoption.</p>
+            </div>
+            <div class="work">
+                <!-- <i class="fas fa-skiing"></i> -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzbqKKeLnhUxJBPALtVQiHCcV5GbfDkt3KHRfimqds0CfsHo2-KG6lYKgtSwDPqGdrAhI&usqp=CAU"
+                    alt="me">
+                <p class="work-heading">Youth</p>
+                <p class="work-text">SSF assists in developing fundamental skills that are complementary to emerging
+                    technologies such as literacy, basic academic skills – together with entrepreneurial, financial,
+                    digital, cognitive skills (STEM), understanding that the future lies in workers creating economic
+                    value with machines rather than against them.At SSF, youth are trained and leveraged as the
+                    ambassadors of change.</p>
+            </div>
+            <div class="work">
+                <!-- <i class="fas fa-ethernet"></i> -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR24BLLzvy8asdl_zfrwHTYcy0XpR8ROCsQO31_SRtg_jBRjfkChWkTWnTjHxCH_vcGVpQ&usqp=CAU"
+                    alt="me">
+                <p class="work-heading">Women</p>
+                <p class="work-text">A positive change in women’s social and economic status generates a multiplier
+                    effect across the value chain.As digital automation can affect men and women differently, women
+                    being seriously underrepresented in the digital sector. SSF espouses to reduce gender divide in
+                    STEM, IT and computing.At SSF, we work towards making women skilled, connected to contemporary
+                    networks to build livelihood and supported with required know-how.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CSS for header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    margin-bottom: 15px;
+}
+
+.header .logo {
+    font-size: 25px;
+    font-family: 'Sriracha', cursive;
+    color: #000;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:aqua;
+    margin-right: 20px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #000;
+    padding: 35px 20px;
+}
+.carousel-item img{
+    height:500px;
+    width:100%;
+}
+     </style>
+    </head>
+
+<body>
+    <header class='header'>
+        <a href="#" class="logo">Saraswati Seva Foundation</a>
+        <nav class="nav-items">
+            <a href="#">Home</a>
+            <a href="#">Take Assignment</a>
+            <a href="#">Learn Courses</a>
+            <a href="#">Log out</a>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+        <h1>Learn Courses Here</h1>
+        <div class="row" id="topstudents">
+            <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+                <div class="card border-primary">
+                    <div class="card-body bg-primary text-white"
+                        style="height:140px;background-image:url('images/python.jpeg'); background-size:380px 140px;">
+
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=gfDE2a7MKjA">
+                        <div class="card-footer bg-light">
+                            <span>  C++ </span>
+                            <span class=" float-right btn btn-outline-primary ">Learn Now</span>
+                            <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+                <div class="card border-secondary">
+                    <span>  Java </span>
+                    <div class="card-body bg-secondary text-white"
+                        style="height:140px;background-image:url('images/cpp.jpeg'); background-size:380px 140px;">
+                    </div>
+                    <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL">
+                        <div class="card-footer bg-light text-secondary">
+                            <span class="float-right btn btn-outline-secondary">Learn Now</span>
+                            <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+                <div class="card border-success">
+                    <span>  Python </span>
+                    <div class="card-body bg-success text-white"
+                        style="height:140px;background-image:url('images/react.jpeg'); background-size:380px 140px;">
+
+                    </div>
+                    <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt">
+                        <div class="card-footer bg-light text-success">
+                            <span class="float-right btn btn-outline-warning">Learn now</span>
+                            <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+                <div class="card border-danger">
+                    <span> React </span>
+                    <div class="card-body bg-danger text-white"
+                        style="height:140px;background-image:url('images/java.jpeg'); background-size:380px 140px;">
+                    </div>
+                    <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q">
+                        <div class="card-footer bg-light text-danger">
+                            <span class="float-right btn btn-outline-success">Learn Now</span>
+                            <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+                <div class="card border-warning">
+                    <div class="card-body bg-warning text-white"
+                        style="height:140px;background-image:url('images/sql.jpeg'); background-size:380px 140px;">
+                    </div>
+                    <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id">
+                        <div class="card-footer bg-light text-warning">
+                            <span class="float-right btn btn-outline-danger">Learn Now</span>
+                            <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+</body>
